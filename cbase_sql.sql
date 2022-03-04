@@ -170,7 +170,9 @@ select name,
        rank() over(order by avg_rank_2018) rank18,
        avg_rank_2019,
        rank() over(order by avg_rank_2019) rank19,
-       round((avg_rank_2011 + avg_rank_2012 + avg_rank_2013 + avg_rank_2014 + avg_rank_2015 + avg_rank_2016 + avg_rank_2017 + avg_rank_2018 + avg_rank_2019)/9, 2) as avg_rank_total
+       round((avg_rank_2011 + avg_rank_2012 + avg_rank_2013 +
+              avg_rank_2014 + avg_rank_2015 + avg_rank_2016 +
+              avg_rank_2017 + avg_rank_2018 + avg_rank_2019)/9, 2) as avg_rank_total
 from rankings11
      join rankings12 using(name)
      join rankings13 using(name)
